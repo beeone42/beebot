@@ -1,3 +1,13 @@
 {
-	"token":"12345678:AbCdEf...."
+	"token":"12345678:AbCdEf....",
+	"pics":
+	{
+		"cat":"AgADBAADuKcxG42H9A....",
+		"dog":"AgADBAADuacxG42H9A....",
+		"gif":"AAQEABNKTywZAASWdk...."
+	},
+	"files":
+	{
+		"gif":"BQADBAADCQADjYf0A1...."
+	}
 }

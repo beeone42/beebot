@@ -22,8 +22,19 @@ def handle(msg):
 
         # Do your stuff according to `content_type` ...
         if content_type == 'text':
-            if msg['text'] == 'ping':
+            m = msg['text'].split()
+            if m[0] == 'ping':
                 bot.sendMessage(chat_id, 'pong')
+            if m[0] == 'pic':
+                if (config['pics'].has_key(m[1])):
+                    bot.sendPhoto(chat_id, config['pics'][m[1]])
+                else:
+                    bot.sendMessage(chat_id, 'unknown pic')
+            if m[0] == 'file':
+                if (config['files'].has_key(m[1])):
+                    bot.sendDocument(chat_id, config['files'][m[1]])
+                else:
+                    bot.sendMessage(chat_id, 'unknown file')
 
 
 config = read_config("config.json")
